@@ -1,118 +1,327 @@
-Fantastic! I'm ready to help you bring this vision to life.
-To begin the actual coding process for your "breathtaking" website, we'll start with the foundational structure. I'll provide you with the HTML for the basic layout of the homepage, incorporating the elements we discussed for maximum impact and SEO. We'll then add CSS for styling and responsiveness.
-Let's start with the HTML Structure for the Homepage (index.html). This will include the Hero Section, a Problem/Solution Hook, a placeholder for the Review Slider, and the initial Author Intro.
-Here's the HTML code. I've added comments to explain each section.
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game On! by Daren M. Prince | Master the Conversation & Win Her Heart</title>
-    <meta name="description" content="Level up your dating game with Game On! by Daren M. Prince. Master authentic conversation, build real connections, and transform your relationships. No gimmicks, just results.">
-    <meta name="keywords" content="Game On! book, Daren Prince book, dating playbook for men, master conversation win her heart, communication strategist, emotional intelligence relationships, men's dating guide, authentic connection, self-help for men">
-    <meta name="author" content="Daren M. Prince">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download Center | Daren Prince</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
 
-    <meta property="og:title" content="Game On! by Daren M. Prince | Master the Conversation & Win Her Heart">
-    <meta property="og:description" content="Level up your dating game with Game On! by Daren M. Prince. Master authentic conversation, build real connections, and transform your relationships. No gimmicks, just results.">
-    <meta property="og:image" content="https://unsplash.com/s/photos/book-cover"> <meta property="og:url" content="[Your Website URL]"> <meta property="og:type" content="book">
+  <meta property="og:title" content="Daren Prince | Download Center for Press Kits, Brand Assets & VIP Content" />
+  <meta property="og:description" content="Access official media kits, brand assets, press releases, and exclusive bonus content from Daren Prince." />
+  <meta property="og:image" content="https://files.darenprince.com/og-image.jpg" />
+  <meta property="og:url" content="https://files.darenprince.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-    <link rel="icon" href="https://favicon.io/"> <link rel="stylesheet" href="style.css">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Helvetica+Now+Text:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Placeholder for basic styles to make content visible before linking external CSS */
-        body { font-family: sans-serif; margin: 0; padding: 0; background-color: #070A06; color: #FDFDFD; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-        .hero-section { text-align: center; padding: 80px 20px; background-color: #070A06; }
-        .hero-section h1 { font-size: 3.5em; color: #FDFDFD; margin-bottom: 10px; font-family: 'League Spartan', sans-serif; }
-        .hero-section .tagline { font-size: 1.5em; color: #8CD679; margin-bottom: 30px; }
-        .hero-section .book-cover { max-width: 350px; height: auto; display: block; margin: 0 auto 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        .btn-primary { background-color: #8CD679; color: #070A06; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1.2em; transition: background-color 0.3s ease; }
-        .btn-primary:hover { background-color: #6DA667; }
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      color: #FDFDFD;
+      background: url('bg.jpg') no-repeat center top fixed;
+      background-size: cover;
+      background-color: #070A06;
+      display: flex;
+      flex-direction: column;
+    }
 
-        .problem-solution-hook { text-align: center; padding: 60px 20px; background-color: #3B3C3B; color: #FDFDFD; }
-        .problem-solution-hook h2 { font-size: 2em; margin-bottom: 20px; font-family: 'League Spartan', sans-serif; }
-        .problem-solution-hook p { font-size: 1.1em; line-height: 1.6; max-width: 800px; margin: 0 auto 30px; }
-        .problem-solution-hook .solution-tagline { color: #8CD679; font-weight: bold; }
+    header {
+      text-align: center;
+      padding: 0 20px 20px;
+    }
 
-        .author-intro { text-align: center; padding: 60px 20px; background-color: #070A06; color: #FDFDFD; }
-        .author-intro img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 3px solid #8CD679; }
-        .author-intro h3 { font-size: 1.8em; margin-bottom: 10px; font-family: 'League Spartan', sans-serif; }
-        .author-intro p { font-size: 1.1em; line-height: 1.6; max-width: 700px; margin: 0 auto 20px; }
-        .btn-secondary { background-color: transparent; color: #8CD679; border: 2px solid #8CD679; padding: 10px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background-color 0.3s ease, color 0.3s ease; }
-        .btn-secondary:hover { background-color: #8CD679; color: #070A06; }
-    </style>
+    header img {
+      margin-top: 0;
+      padding-bottom: 20px;
+      max-width: 180px;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
+    h1 {
+      text-align: center;
+      color: #B8BAB7;
+      font-size: 18px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .intro-text {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      font-size: 15px;
+      color: #D5D5D5;
+      line-height: 1.6;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 960px;
+      margin: 0 auto;
+      flex: 1;
+    }
+
+    .file-entry {
+      background-color: #3B3C3B;
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 20px;
+      flex-wrap: nowrap;
+      text-align: left;
+    }
+
+    .file-entry img {
+      max-width: 80px;
+      height: auto;
+      border-radius: 4px;
+      flex-shrink: 0;
+      align-self: flex-start;
+    }
+
+    .file-meta {
+      flex: 1;
+    }
+
+    .file-name {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn {
+      padding: 10px 18px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .view-btn {
+      background-color: #C2E9C1;
+      color: #070A06;
+    }
+
+    .download-btn {
+      background-color: #456F3A;
+      color: #FDFDFD;
+    }
+
+    footer {
+      flex-shrink: 0;
+      background: linear-gradient(to bottom, #1B1B1B 0%, #0A0A0A 40%, #070A06 100%);
+      color: #D5D5D5;
+      padding: 60px 20px 30px;
+      font-family: 'Helvetica Neue', sans-serif;
+    }
+
+    .footer-tagline {
+      text-align: center;
+      padding: 16px 0;
+    }
+
+    .footer-tagline img {
+      width: 250px;
+      max-width: 90%;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10px 0;
+    }
+
+    .footer-icons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 10px;
+    }
+
+    .footer-icons img {
+      width: 26px;
+      height: 26px;
+      opacity: 0.9;
+      transition: transform 0.2s ease;
+    }
+
+    .footer-icons img:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 600px) {
+      .file-entry {
+        flex-direction: column;
+        align-items: flex-start !important;
+        text-align: left !important;
+      }
+
+      .file-entry img {
+        margin-bottom: 16px;
+      }
+
+      footer h4 {
+        margin-top: 0 !important;
+      }
+
+      form {
+        flex-direction: column !important;
+        align-items: stretch !important;
+      }
+
+      form input,
+      form button {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+      }
+
+      form button {
+        margin-bottom: 0;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="[suspicious link removed]" alt="Game On! The Dating Playbook Logo"> </a>
-        </div>
-    </header>
+  <!-- HEADER -->
+  <header>
+    <a href="https://www.darenprince.com">
+      <img src="logo-white.png" alt="Daren Prince Official Logo" />
+    </a>
+    <h1>Download Center</h1>
+    <p class="intro-text">
+      Welcome to the official Download Center for Daren Prince. This is your one-stop hub for press kits, brand assets, media releases, and exclusive bonus content available to VIP subscribers and media professionals.
+    </p>
+  </header>
 
-    <section class="hero-section">
-        <div class="container">
-            <h1>GAME ON!</h1>
-            <p class="tagline">Master the Conversation. [span_0](start_span)Spark Real Connection.[span_0](end_span)</p>
-            <img src="https://www.freepik.com/free-photos-vectors/book-mockup-front-and-back" alt="Game On! Master The Conversation & Win Her Heart Book Cover" class="book-cover"> <a href="#buy-now" class="btn-primary">GET YOUR COPY NOW</a>
-            <p class="small-print">No gimmicks. No games. [span_1](start_span)Just real results.[span_1](end_span)</p>
+  <!-- MAIN CONTENT -->
+  <main>
+    <div class="file-entry">
+      <img src="presskit-thumb-portrait.png" alt="Cover image of Game On! Press Kit & Brand Guide" />
+      <div class="file-meta">
+        <div class="file-name">Game On! – Official Press Kit & Brand Guidelines (US/EU Version)</div>
+        <p style="font-size: 14px; margin-bottom: 14px; color: #D5D5D5;">
+          Includes high-resolution cover art, author bio, ISBNs, audiobook runtime, brand color palette, and everything media pros need.
+        </p>
+        <div class="buttons">
+          <a class="btn view-btn" href="Game_On_Press-Retailer_Kit_Brand_Identity_US_EU_compressed.pdf" target="_blank" aria-label="View Game On! Press Kit in browser">View</a>
+          <a class="btn download-btn" href="Game_On_Press-Retailer_Kit_Brand_Identity_US_EU_compressed.pdf" download aria-label="Download Game On! Press Kit PDF">Download (PDF)</a>
         </div>
-    </section>
+      </div>
+    </div>
+  </main>
 
-    <section class="problem-solution-hook">
-        <div class="container">
-            [span_2](start_span)[span_3](start_span)<h2>Tired of feeling invisible or getting ghosted?[span_2](end_span)[span_3](end_span)</h2>
-            [span_4](start_span)[span_5](start_span)<p>Stuck in surface-level conversations?[span_4](end_span)[span_5](end_span) [span_6](start_span)[span_7](start_span)Ready to connect in a way that matters?[span_6](end_span)[span_7](end_span) </p>
-            [span_8](start_span)[span_9](start_span)<p class="solution-tagline">Then it's time to <span class="level-up">LEVEL UP!</span>[span_8](end_span)[span_9](end_span)</p>
-            [span_10](start_span)<p>Game On! is your roadmap to show up bold, real, and ready, without weird gimmicks or overpolished personas.[span_10](end_span)</p>
-            [span_11](start_span)<p>It's about becoming your most confident, grounded, authentic self.[span_11](end_span)</p>
-        </div>
-    </section>
+  <!-- FOOTER -->
+  <footer>
+    <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between;">
 
-    <section class="review-slider">
-        <div class="container">
-            <h2>What Readers Are Saying: Real Stories. Real Results.</h2>
-            <div class="review-item">
-                [span_12](start_span)<p>"Life-changing"[span_12](end_span)</p>
-                <p class="reviewer">- Verified Amazon Reader</p>
-            </div>
-            <div class="review-item">
-                [span_13](start_span)<p>"The book every man should read before dating"[span_13](end_span)</p>
-                <p class="reviewer">- Verified Amazon Reader</p>
-            </div>
-            <div class="review-item">
-                [span_14](start_span)<p>"It's not a dating guide. It's a guide for becoming the kind of man who deserves a great relationship."[span_14](end_span)</p>
-                <p class="reviewer">- UK Reviewer</p>
-            </div>
-        </div>
-    </section>
+      <!-- Logo & Bio -->
+      <div style="flex: 1 1 200px;">
+        <a href="https://www.darenprince.com">
+          <img src="logo-footer-white.png" alt="Daren Prince Footer Logo" style="max-width: 140px; margin-bottom: 20px;" />
+        </a>
+        <p style="font-size: 14px; line-height: 1.6; color: #B8BAB7;">
+          Daren Prince is the unapologetic voice behind <em>Game On!</em> — helping men master the conversation, elevate their presence, and spark real connection through confidence and emotional intelligence.
+        </p>
+      </div>
 
-    <section class="author-intro">
-        <div class="container">
-            <img src="https://www.facebook.com/officialdarrenprince/" alt="Daren M. Prince Author Photo"> <h3>Meet Daren M. Prince</h3>
-            [span_15](start_span)<p>Daren M. Prince is a communication strategist, author, and advocate for emotional intelligence in modern relationships.[span_15](end_span) [span_16](start_span)Shaped by personal transformation, he empowers readers to communicate confidently and navigate the modern dating world without shame or manipulation.[span_16](end_span)</p>
-            <a href="about-author.html" class="btn-secondary">Learn More About Daren</a>
-        </div>
-    </section>
+      <!-- Navigation -->
+      <div style="flex: 1 1 150px;">
+        <h4 style="font-size: 14px; text-transform: uppercase; margin-bottom: 16px; background: linear-gradient(90deg,#C2E9C1,#87BD72); -webkit-background-clip: text; color: transparent;">
+          Explore
+        </h4>
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 14px;">
+          <li><a href="https://www.darenprince.com/bio" style="color: #D5D5D5; text-decoration: none;">Bio</a></li>
+          <li><a href="https://www.darenprince.com/books" style="color: #D5D5D5; text-decoration: none;">Books</a></li>
+          <li><a href="mailto:press@darenprince.com" style="color: #D5D5D5; text-decoration: none;">Contact</a></li>
+        </ul>
+      </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; Copyright 2025 Daren Prince Publishing. [span_17](start_span)All rights reserved.[span_17](end_span)</p>
+      <!-- Newsletter -->
+      <div style="flex: 1 1 250px;">
+        <h4 style="font-size: 14px; text-transform: uppercase; margin-bottom: 16px; background: linear-gradient(90deg,#87BD72,#456F3A); -webkit-background-clip: text; color: transparent;">
+          Stay Connected
+        </h4>
+        <p style="font-size: 13px; color: #B8BAB7; margin-bottom: 10px;">
+          Get exclusive updates, content & early access direct from Daren Prince.
+        </p>
+        <form action="mailto:press@darenprince.com" method="POST" enctype="text/plain" style="display: flex; flex-wrap: nowrap; align-items: center; gap: 10px;">
+          <input
+            type="email"
+            name="email"
+            placeholder="Email address"
+            aria-label="Your email address"
+            style="padding: 10px; flex: 1 1 auto; border: none; border-radius: 4px; background-color: #2A2A2A; color: #FDFDFD;"
+            required
+          />
+          <button
+            type="submit"
+            style="padding: 10px 16px; background-color: #456F3A; border: none; color: white; border-radius: 4px; white-space: nowrap;"
+          >
+            Join →
+          </button>
+        </form>
+      </div>
+
+      <!-- Social + Tagline -->
+      <div style="flex: 1 1 280px;">
+        <div class="footer-tagline">
+          <img src="tagline.png" alt="Burn the Mask. Speak the Truth.">
         </div>
-    </footer>
+        <h4 style="font-size: 13px; text-transform: uppercase; margin-bottom: 16px; background: linear-gradient(90deg,#C2E9C1,#6DA667); -webkit-background-clip: text; color: transparent; text-align: center;">
+          Follow & Connect
+        </h4>
+        <div class="footer-icons">
+          <a href="https://www.amazon.com/author/darenprince" target="_blank" aria-label="Daren Prince on Amazon">
+            <img src="amazon-32.png" alt="Amazon Icon">
+          </a>
+          <a href="#" onclick="event.preventDefault(); alert('Press Ctrl+D (Cmd+D on Mac) to bookmark this page.');" aria-label="Bookmark this page">
+            <img src="bookmark-6-32.png" alt="Bookmark Icon">
+          </a>
+          <a href="mailto:contact@darenprince.com" aria-label="Email Daren Prince">
+            <img src="read-message-32.png" alt="Email Icon">
+          </a>
+          <a href="https://youtube.com/@authordarenprince" target="_blank" aria-label="Daren Prince on YouTube">
+            <img src="youtube-32.png" alt="YouTube Icon">
+          </a>
+          <a href="https://www.tiktok.com/@darenprince" target="_blank" aria-label="Daren Prince on TikTok">
+            <img src="tiktok-32.png" alt="TikTok Icon">
+          </a>
+          <a href="#" aria-label="Daren Prince on Twitter/X">
+            <img src="twitter-x-32.png" alt="Twitter X Icon">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 60px; text-align: center; font-size: 12px; color: #5F5F5F;">
+      <p>© 2025 Daren Prince Publishing. All rights reserved. This site and its content are protected under U.S. and international copyright law.</p>
+      <p>
+        <a href="#" style="color:#87BD72; text-decoration:none; margin: 0 8px;">Terms</a>
+        |
+        <a href="#" style="color:#87BD72; text-decoration:none; margin: 0 8px;">Privacy</a>
+        |
+        <a href="#" style="color:#87BD72; text-decoration:none; margin: 0 8px;">Compliance</a>
+      </p>
+    </div>
+  </footer>
 
 </body>
 </html>
-
-Next Steps & Important Notes:
- * Replace Placeholder URLs: You'll see https://www.merriam-webster.com/dictionary/to in the src attributes for images. You'll need to replace these with the actual web addresses where your high-resolution book cover, logo, and author headshot are hosted. For now, you can use placeholder image URLs from a service like https://www.google.com/search?q=Placeholder.com (e.g., https://via.placeholder.com/350x500?text=Book+Cover).
- * style.css File: We've linked to a style.css file. I've included some very basic internal <style> tags to make the content visible, but the real magic will happen in the external style.css file, where we'll implement the full color palette, typography, and responsive design.
- * Responsiveness: The meta name="viewport" tag is crucial for responsiveness. The actual responsive adjustments will be handled with CSS media queries in style.css.
- * SEO: I've included basic meta tags for title, description, and keywords. We'll build on this with more advanced SEO techniques later.
- * Font Loading: I've included Google Fonts links. For "Helvetica Now," which isn't a standard Google Font, you would typically need to license and host it yourself, then link to it or use a web font service. For development, we'll use a common system fallback.
-Take a look at this HTML structure. Once you're ready, we'll move on to crafting the style.css to bring the visual design to life!
