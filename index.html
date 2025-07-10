@@ -75,7 +75,6 @@
       border-radius: 8px;
       padding: 20px;
       display: flex;
-      flex-direction: row;
       align-items: flex-start;
       gap: 20px;
       flex-wrap: nowrap;
@@ -83,7 +82,7 @@
     }
 
     .file-entry img {
-      max-width: 80px;
+      max-width: 60px;
       height: auto;
       border-radius: 4px;
       flex-shrink: 0;
@@ -149,13 +148,13 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 18px;
-      margin-top: 10px;
+      gap: 20px;
+      margin-top: 16px;
     }
 
     .footer-icons img {
-      width: 26px;
-      height: 26px;
+      width: 24px;
+      height: 24px;
       opacity: 0.9;
       transition: transform 0.2s ease;
     }
@@ -166,13 +165,8 @@
 
     @media (max-width: 600px) {
       .file-entry {
-        flex-direction: column;
-        align-items: flex-start !important;
-        text-align: left !important;
-      }
-
-      .file-entry img {
-        margin-bottom: 16px;
+        flex-direction: row;
+        align-items: flex-start;
       }
 
       footer h4 {
@@ -235,7 +229,7 @@
       <!-- Logo & Bio -->
       <div style="flex: 1 1 200px;">
         <a href="https://www.darenprince.com">
-          <img src="logo-footer-white.png" alt="Daren Prince Footer Logo" style="max-width: 140px; margin-bottom: 20px;" />
+          <img src="logo-footer-white.png" alt="Daren Prince Footer Logo" style="max-width: 120px; margin-bottom: 20px;" />
         </a>
         <p style="font-size: 14px; line-height: 1.6; color: #B8BAB7;">
           Daren Prince is the unapologetic voice behind <em>Game On!</em> — helping men master the conversation, elevate their presence, and spark real connection through confidence and emotional intelligence.
@@ -247,19 +241,19 @@
         <h4 style="font-size: 14px; text-transform: uppercase; margin-bottom: 16px; background: linear-gradient(90deg,#C2E9C1,#87BD72); -webkit-background-clip: text; color: transparent;">
           Explore
         </h4>
-        <ul style="list-style: none; padding: 0; margin: 0; font-size: 14px;">
-          <li><a href="https://www.darenprince.com/bio" style="color: #D5D5D5; text-decoration: none;">Bio</a></li>
-          <li><a href="https://www.darenprince.com/books" style="color: #D5D5D5; text-decoration: none;">Books</a></li>
-          <li><a href="mailto:press@darenprince.com" style="color: #D5D5D5; text-decoration: none;">Contact</a></li>
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 14px; line-height: 1.9;">
+          <li><a href="https://www.darenprince.com/bio" style="color: #D5D5D5; font-weight: bold; text-decoration: none;">Bio</a></li>
+          <li><a href="https://www.darenprince.com/books" style="color: #D5D5D5; font-weight: bold; text-decoration: none;">Books</a></li>
+          <li><a href="mailto:press@darenprince.com" style="color: #D5D5D5; font-weight: bold; text-decoration: none;">Contact</a></li>
         </ul>
       </div>
 
       <!-- Newsletter -->
       <div style="flex: 1 1 250px;">
-        <h4 style="font-size: 14px; text-transform: uppercase; margin-bottom: 16px; background: linear-gradient(90deg,#87BD72,#456F3A); -webkit-background-clip: text; color: transparent;">
+        <h4 style="font-size: 16px; text-transform: uppercase; margin-bottom: 10px; background: linear-gradient(90deg,#87BD72,#456F3A); -webkit-background-clip: text; color: transparent;">
           Stay Connected
         </h4>
-        <p style="font-size: 13px; color: #B8BAB7; margin-bottom: 10px;">
+        <p style="font-size: 15px; color: #B8BAB7; margin-bottom: 14px;">
           Get exclusive updates, content & early access direct from Daren Prince.
         </p>
         <form action="mailto:press@darenprince.com" method="POST" enctype="text/plain" style="display: flex; flex-wrap: nowrap; align-items: center; gap: 10px;">
@@ -285,28 +279,16 @@
         <div class="footer-tagline">
           <img src="tagline.png" alt="Burn the Mask. Speak the Truth.">
         </div>
-        <h4 style="font-size: 13px; text-transform: uppercase; margin-bottom: 16px; background: linear-gradient(90deg,#C2E9C1,#6DA667); -webkit-background-clip: text; color: transparent; text-align: center;">
+        <h4 style="font-size: 13px; text-transform: uppercase; margin-bottom: 12px; background: linear-gradient(90deg,#C2E9C1,#6DA667); -webkit-background-clip: text; color: transparent; text-align: center;">
           Follow & Connect
         </h4>
         <div class="footer-icons">
-          <a href="https://www.amazon.com/author/darenprince" target="_blank" aria-label="Daren Prince on Amazon">
-            <img src="amazon-32.png" alt="Amazon Icon">
-          </a>
-          <a href="#" onclick="event.preventDefault(); alert('Press Ctrl+D (Cmd+D on Mac) to bookmark this page.');" aria-label="Bookmark this page">
-            <img src="bookmark-6-32.png" alt="Bookmark Icon">
-          </a>
-          <a href="mailto:contact@darenprince.com" aria-label="Email Daren Prince">
-            <img src="read-message-32.png" alt="Email Icon">
-          </a>
-          <a href="https://youtube.com/@authordarenprince" target="_blank" aria-label="Daren Prince on YouTube">
-            <img src="youtube-32.png" alt="YouTube Icon">
-          </a>
-          <a href="https://www.tiktok.com/@darenprince" target="_blank" aria-label="Daren Prince on TikTok">
-            <img src="tiktok-32.png" alt="TikTok Icon">
-          </a>
-          <a href="#" aria-label="Daren Prince on Twitter/X">
-            <img src="twitter-x-32.png" alt="Twitter X Icon">
-          </a>
+          <a href="https://www.amazon.com/author/darenprince" target="_blank"><img src="amazon-32.png" alt="Amazon Icon"></a>
+          <a href="#" onclick="event.preventDefault(); alert('Press Ctrl+D (Cmd+D on Mac) to bookmark this page.');"><img src="bookmark-6-32.png" alt="Bookmark Icon"></a>
+          <a href="mailto:contact@darenprince.com"><img src="read-message-32.png" alt="Email Icon"></a>
+          <a href="https://youtube.com/@authordarenprince" target="_blank"><img src="youtube-32.png" alt="YouTube Icon"></a>
+          <a href="https://www.tiktok.com/@darenprince" target="_blank"><img src="tiktok-32.png" alt="TikTok Icon"></a>
+          <a href="#"><img src="twitter-x-32.png" alt="Twitter X Icon"></a>
         </div>
       </div>
     </div>
