@@ -5,15 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Download Center | Daren Prince</title>
   <link rel="icon" type="image/png" href="favicon.png" />
-  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
 
+  <!-- Social metadata -->
   <meta property="og:title" content="Daren Prince | Download Center for Press Kits, Brand Assets & VIP Content" />
   <meta property="og:description" content="Access official media kits, brand assets, press releases, and exclusive bonus content from Daren Prince." />
   <meta property="og:image" content="https://files.darenprince.com/og-image.jpg" />
   <meta property="og:url" content="https://files.darenprince.com/" />
   <meta name="twitter:card" content="summary_large_image" />
 
+  <!-- Google Fonts fallback -->
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet" />
+
   <style>
+    @font-face {
+      font-family: 'Futura PT W08 Extra Bold';
+      src: url('Futura PT W08 Extra Bold.woff') format('woff');
+      font-weight: 800;
+      font-style: normal;
+    }
+
     html, body {
       height: 100%;
       margin: 0;
@@ -52,6 +62,7 @@
       letter-spacing: 1px;
       text-transform: uppercase;
       margin-bottom: 10px;
+      font-family: 'Futura PT W08 Extra Bold', 'League Spartan', sans-serif;
     }
 
     .intro-text {
@@ -96,6 +107,7 @@
     .file-name {
       font-weight: bold;
       margin-bottom: 10px;
+      font-family: 'Futura PT W08 Extra Bold', 'League Spartan', sans-serif;
     }
 
     .buttons {
@@ -135,13 +147,20 @@
     }
 
     .footer-tagline img {
-      width: 250px;
+      width: 400px;
       max-width: 90%;
       height: auto;
       display: block;
       margin-left: auto;
       margin-right: auto;
       padding: 10px 0;
+    }
+
+    footer h4 {
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      font-family: 'Futura PT W08 Extra Bold', 'League Spartan', sans-serif;
     }
 
     .footer-icons {
@@ -229,7 +248,7 @@
       <!-- Logo & Bio -->
       <div style="flex: 1 1 200px;">
         <a href="https://www.darenprince.com">
-          <img src="logo-footer-white.png" alt="Daren Prince Footer Logo" style="max-width: 120px; margin-bottom: 20px;" />
+          <img src="logo-footer-white.png" alt="Daren Prince Footer Logo" style="max-width: 100px; margin-bottom: 20px;" />
         </a>
         <p style="font-size: 14px; line-height: 1.6; color: #B8BAB7;">
           Daren Prince is the unapologetic voice behind <em>Game On!</em> — helping men master the conversation, elevate their presence, and spark real connection through confidence and emotional intelligence.
@@ -238,7 +257,7 @@
 
       <!-- Navigation -->
       <div style="flex: 1 1 150px;">
-        <h4 style="font-size: 14px; text-transform: uppercase; margin-bottom: 16px; background: linear-gradient(90deg,#C2E9C1,#87BD72); -webkit-background-clip: text; color: transparent;">
+        <h4 style="background: linear-gradient(90deg,#C2E9C1,#87BD72); -webkit-background-clip: text; color: transparent;">
           Explore
         </h4>
         <ul style="list-style: none; padding: 0; margin: 0; font-size: 14px; line-height: 1.9;">
@@ -250,7 +269,7 @@
 
       <!-- Newsletter -->
       <div style="flex: 1 1 250px;">
-        <h4 style="font-size: 16px; text-transform: uppercase; margin-bottom: 10px; background: linear-gradient(90deg,#87BD72,#456F3A); -webkit-background-clip: text; color: transparent;">
+        <h4 style="font-size: 16px; background: linear-gradient(90deg,#87BD72,#456F3A); -webkit-background-clip: text; color: transparent;">
           Stay Connected
         </h4>
         <p style="font-size: 15px; color: #B8BAB7; margin-bottom: 14px;">
@@ -279,7 +298,7 @@
         <div class="footer-tagline">
           <img src="tagline.png" alt="Burn the Mask. Speak the Truth.">
         </div>
-        <h4 style="font-size: 13px; text-transform: uppercase; margin-bottom: 12px; background: linear-gradient(90deg,#C2E9C1,#6DA667); -webkit-background-clip: text; color: transparent; text-align: center;">
+        <h4 style="font-size: 13px; background: linear-gradient(90deg,#C2E9C1,#6DA667); -webkit-background-clip: text; color: transparent; text-align: center;">
           Follow & Connect
         </h4>
         <div class="footer-icons">
