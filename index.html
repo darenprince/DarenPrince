@@ -117,9 +117,10 @@
       left: -6px;
       width: 100%;
       height: 100%;
-      border: 6px solid transparent;
-      border-top: 6px solid #87BD72;
-      border-right: 6px solid #87BD72;
+      /* UPDATED: Base border for full circle, plus animating top/right sections */
+      border: 6px solid rgba(135, 189, 114, 0.2); /* Subtle base circle outline */
+      border-top: 6px solid #87BD72; /* Bright green rotating part */
+      border-right: 6px solid #87BD72; /* Bright green rotating part */
       border-radius: 50%;
       animation: animateC 2s linear infinite;
     }
@@ -175,16 +176,16 @@
       top: 0;
       width: 100%;
       z-index: 3;
-      padding: 18px 22px; /* REVERTED: Back to original padding */
+      padding: 18px 22px; /* Kept original padding */
       display: flex;
       justify-content: space-between;
-      align-items: flex-start; /* UPDATED: Align items to the top */
+      align-items: flex-start; /* Aligns content to the top */
       box-sizing: border-box;
-      min-height: 70px;
+      min-height: auto; /* UPDATED: Removed min-height to allow padding to dictate height */
     }
 
     .header-nav .logo img {
-      max-width: 110px; /* REVERTED: Back to original size */
+      max-width: 110px; /* Original size */
       height: auto;
       display: block;
       padding: 0;
@@ -203,7 +204,7 @@
 
     .logo-and-tagline {
       display: flex;
-      align-items: flex-start; /* UPDATED: Also align items to the top here */
+      align-items: flex-start; /* Aligns content to the top */
       padding-top: 0;
     }
 
@@ -214,7 +215,7 @@
 
     .menu-icon {
       cursor: pointer;
-      display: block; /* Ensure it's always block for correct rendering on mobile */
+      display: block;
     }
 
     .menu-icon .navicon {
@@ -238,11 +239,11 @@
     }
 
     .menu-icon .navicon:before {
-      top: -6px; /* UPDATED: Corrected position for top bar */
+      top: -6px; /* Corrected position for top bar */
     }
 
     .menu-icon .navicon:after {
-      top: 6px; /* UPDATED: Corrected position for bottom bar */
+      top: 6px; /* Corrected position for bottom bar */
     }
 
     /* Hamburger Animation */
@@ -580,7 +581,7 @@
 
       /* Mobile Nav specific styles */
       .menu-icon {
-        display: block; /* Ensure it's displayed */
+        display: block;
       }
       .header-nav .logo-and-tagline {
         justify-content: flex-start;
