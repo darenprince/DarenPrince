@@ -7,18 +7,18 @@
   <link rel="icon" type="image/png" href="favicon.png" />
 
   <meta property="og:title" content="Daren Prince | Download Center for Press Kits, Brand Assets & VIP Content" />
-  <meta property="og:description" content="Access official media kits, brand assets, press releases, and exclusive bonus content from Daren Prince." />
+  <meta property="og:description" content="Access essential press kits, images, promotional content, author bios, and exclusive content from author Daren Prince." />
   <meta property="og:image" content="https://files.darenprince.com/og-image.jpg" /> <meta property="og:url" content="https://files.darenprince.com/" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@500;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;800&display=swap" rel="stylesheet" />
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Download Center | Daren Prince",
-    "description": "Access official media kits, brand assets, press releases, and exclusive bonus content from Daren Prince.",
+    "description": "Access essential press kits, images, promotional content, author bios, and exclusive content from author Daren Prince.",
     "url": "https://files.darenprince.com/",
     "about": {
       "@type": "Person",
@@ -32,8 +32,8 @@
         "@id": "https://files.darenprince.com/#darenprincepublishing" /* Unique ID for Daren Prince Publishing */
       },
       "sameAs": [
-        "https://www.goodreads.com/darenprince", /* Verify actual Goodreads URL */
-        "https://www.amazon.com/author/darenprince", /* Added Amazon Author Profile */
+        "https://www.goodreads.com/author/show/53671567.Daren_Prince", /* UPDATED: Specific Goodreads URL */
+        "https://www.amazon.com/author/darenprince" /* Amazon Author Profile */
         /* ADD OTHER OFFICIAL SOCIAL MEDIA LINKS HERE ONCE THEY ARE LIVE */
       ]
     },
@@ -44,7 +44,7 @@
       "url": "https://www.darenprince.com",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://files.darenprince.com/logo-hires-black-for-light-bg.svg" /* UPDATED: Using the black SVG logo for schema */
+        "url": "https://files.darenprince.com/logo-hires-black-for-light-bg.svg" /* Using the black SVG logo for schema */
       }
     }
   }
@@ -196,7 +196,7 @@
       text-decoration: none;
       color: #D5D5D5;
       font-family: 'Urbanist', sans-serif;
-      font-weight: 500;
+      font-weight: 500; /* Lighter font weight for nav */
       transition: background-color 0.3s ease, color 0.3s ease;
     }
 
@@ -224,7 +224,7 @@
 
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Urbanist', sans-serif;
-      font-weight: 800;
+      font-weight: 800; /* Bold font weight for all headings */
       color: #B8BAB7;
     }
 
@@ -290,7 +290,7 @@
     /* Make the entire file-name div clickable */
     .file-name {
       font-family: 'Urbanist', sans-serif;
-      font-weight: 800;
+      font-weight: 800; /* Bold font weight */
       margin-bottom: 10px;
       /* If you want the whole div to visually respond as a link */
       cursor: pointer;
@@ -313,16 +313,17 @@
       border-radius: 5px;
       text-align: center;
       font-family: 'Urbanist', sans-serif;
-      font-weight: 700;
+      font-weight: 500; /* Lighter font weight for buttons */
       white-space: nowrap;
       transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for hover */
     }
 
-    .view-btn {
+    /* Fix for View button text color */
+    a.btn.view-btn { /* Made selector more specific to force color */
       background-color: #C2E9C1;
-      color: #070A06;
+      color: #070A06; /* "Almost black" grey */
     }
-    .view-btn:hover { /* Hover effect for view button */
+    a.btn.view-btn:hover { /* Hover effect for view button */
         background-color: #A0D39F;
     }
 
@@ -363,9 +364,9 @@
     footer h4 {
       font-size: 14px;
       text-transform: uppercase;
+      font-weight: 800; /* Bold font weight */
       margin-bottom: 16px;
       font-family: 'Urbanist', sans-serif;
-      font-weight: 800;
       text-align: left;
     }
     
@@ -391,6 +392,43 @@
     .footer-icons img:hover {
       transform: scale(1.1);
     }
+
+    /* NEW: Styles for Bookstore Logos in Footer */
+    .bookstore-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px; /* Spacing between logos */
+      margin-top: 30px; /* Space above this section */
+      margin-bottom: 20px; /* Space below this section */
+      flex-wrap: wrap; /* Allow wrapping on smaller screens */
+      max-width: 80%; /* Total max width of the whole row */
+      margin-left: auto; /* Center the row */
+      margin-right: auto; /* Center the row */
+    }
+
+    .bookstore-logos a {
+      height: 32px; /* Set a consistent height for all logos */
+      display: flex; /* Use flex to center image if it doesn't fill height */
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0; /* Prevent shrinking below intended size */
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .bookstore-logos a img {
+      max-height: 100%; /* Ensure image fits within defined height */
+      max-width: 100%; /* Prevent stretching, maintain aspect ratio */
+      width: auto; /* Allow auto width based on height and aspect ratio */
+      height: auto; /* Allow auto height based on max-height */
+      opacity: 0.9;
+    }
+
+    .bookstore-logos a:hover {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+
 
     /* Media Queries for Responsiveness */
     @media (max-width: 600px) {
@@ -486,6 +524,20 @@
         z-index: 2;
       }
       /* === END MOBILE NAVIGATION REVISION === */
+
+      /* NEW: Mobile Styles for Bookstore Logos in Footer */
+      .bookstore-logos {
+        flex-direction: column; /* Stack vertically */
+        gap: 15px; /* Adjust vertical spacing */
+      }
+      .bookstore-logos a {
+        width: 45%; /* 45% width for each item */
+        height: auto; /* Auto height on mobile */
+      }
+      .bookstore-logos a img {
+        width: 100%; /* Image takes full width of its container */
+        height: auto;
+      }
     }
   </style>
 </head>
@@ -599,7 +651,25 @@
           <a href="https://www.tiktok.com/@darenprince" target="_blank"><img src="tiktok-32.png" alt="TikTok Icon"></a>
           <a href="#"><img src="twitter-x-32.png" alt="Twitter X Icon"></a>
         </div>
-      </div>
+
+        <h4 style="font-size: 13px; background: linear-gradient(90deg,#C2E9C1,#6DA667); -webkit-background-clip: text; color: transparent; margin-top: 30px;">
+          Also Available On:
+        </h4>
+        <div class="bookstore-logos">
+          <a href="https://www.amazon.com/author/darenprince" target="_blank" aria-label="Find Daren Prince books on Amazon">
+            <img src="amazon.png" alt="Amazon Books Logo">
+          </a>
+          <a href="https://www.goodreads.com/author/show/53671567.Daren_Prince" target="_blank" aria-label="Find Daren Prince books on Goodreads">
+            <img src="goodreads.png" alt="Goodreads Logo">
+          </a>
+          <a href="https://apple.co/45SmJH4" target="_blank" aria-label="Find Daren Prince books on Apple Books">
+            <img src="ibooks.png" alt="Apple Books Logo">
+          </a>
+          <a href="https://play.google.com/store/books/details/Daren Prince Game On Master The Conversation Win H?id=BYFbEQAAQBAJ" target="_blank" aria-label="Find Daren Prince books on Google Play Books">
+            <img src="googleplay.png" alt="Google Play Books Logo">
+          </a>
+        </div>
+        </div>
     </div>
 
     <div style="margin-top: 60px; text-align: center; font-size: 12px; color: #5F5F5F;">
