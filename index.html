@@ -91,16 +91,15 @@
     /* Styles for the Glowing Loader Ring */
     .ring {
       position: relative;
-      width: 200px;
-      height: 200px;
+      width: 100px; /* UPDATED: Half size */
+      height: 100px; /* UPDATED: Half size */
       border: 0px solid #000;
       border-radius: 50%;
       text-align: center;
-      line-height: 200px;
-      font-size: 20px;
-      color: #87BD72; /* Green color for text */
-      text-shadow: 0 0 10px #87BD72; /* Green glow for text shadow */
-      /* UPDATED: Green box-shadow with transparency */
+      line-height: 100px; /* UPDATED: Half size */
+      font-size: 10px; /* UPDATED: Half size */
+      color: #87BD72;
+      text-shadow: 0 0 10px #87BD72;
       box-shadow: 0 0 20px rgba(135, 189, 114, 0.5);
       overflow: hidden;
       display: flex;
@@ -112,13 +111,13 @@
     .ring:before {
       content: '';
       position: absolute;
-      top: -3px;
-      left: -3px;
+      top: -1.5px; /* UPDATED: Half size */
+      left: -1.5px; /* UPDATED: Half size */
       width: 100%;
       height: 100%;
-      border: 3px solid transparent;
-      border-top: 3px solid #87BD72; /* Green border top */
-      border-right: 3px solid #87BD72; /* Green border right */
+      border: 2px solid transparent; /* UPDATED: Adjusted border thickness */
+      border-top: 2px solid #87BD72; /* UPDATED: Adjusted border thickness */
+      border-right: 2px solid #87BD72; /* UPDATED: Adjusted border thickness */
       border-radius: 50%;
       animation: animateC 2s linear infinite;
     }
@@ -126,10 +125,10 @@
     .ring span {
       display: block;
       position: absolute;
-      top: calc(50% - 2px);
+      top: calc(50% - 1px); /* UPDATED: Half size */
       left: 50%;
       width: 50%;
-      height: 4px;
+      height: 2px; /* UPDATED: Half size */
       background: transparent;
       transform-origin: left;
       animation: animate 2s linear infinite;
@@ -138,13 +137,13 @@
     .ring span:before {
       content: '';
       position: absolute;
-      top: -6px;
+      top: -3px; /* UPDATED: Half size */
       right: 0;
-      width: 16px;
-      height: 16px;
+      width: 8px; /* UPDATED: Half size */
+      height: 8px; /* UPDATED: Half size */
       border-radius: 50%;
-      background: #87BD72; /* Green background for the dot */
-      box-shadow: 0 0 20px #87BD72; /* Green glow for the dot shadow */
+      background: #87BD72;
+      box-shadow: 0 0 20px #87BD72;
     }
 
     @keyframes animateC {
