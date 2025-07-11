@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Daren Prince: The Sound of the Underground | Daren Prince</title>
+    
+    <meta name="description" content="Download the essential press kit for Daren Prince, featuring high-resolution photos, artist biography, and EPK details.">
+    
+    <link rel="stylesheet" href="style.css"> 
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"> 
+    
+    <meta property="og:title" content="Daren Prince: Press Kit">
+    <meta property="og:description" content="Download the essential press kit for Daren Prince, featuring high-resolution photos, artist biography, and EPK details.">
+    <meta property="og:image" content="https://yourwebsite.com/images/social-share-image.jpg"> <meta property="og:url" content="https://yourwebsite.com/press-kit.html"> <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Daren Prince: Press Kit">
+    <meta name="twitter:description" content="Download the essential press kit for Daren Prince, featuring high-resolution photos, artist biography, and EPK details.">
+    <meta name="twitter:image" content="https://yourwebsite.com/images/twitter-share-image.jpg"> <style>
+        /* Basic styling for the header, footer, and main content area */
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures the footer stays at the bottom */
+        }
+
+        /* --- HEADER STYLES (MATCH YOUR MAIN SITE'S HEADER) --- */
+        header {
+            background-color: #333; /* Example color, match your site */
+            color: white; /* Example color, match your site */
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        /* Adjust h1 in header to match your main site's styling if needed */
+        header h1 {
+            margin: 0; /* Remove default margin for h1 */
+            font-size: 2em; /* Adjust font size as needed */
+        }
+
+        /* --- PDF CONTAINER & EMBED STYLES --- */
+        .pdf-container {
+            flex-grow: 1; /* Allows the container to take up available space */
+            position: relative; /* Essential for positioning the download button */
+            width: 100%;
+            display: flex; 
+            justify-content: center; /* Centers the iframe horizontally */
+            align-items: center; /* Centers the iframe vertically within its available space */
+            overflow: hidden; /* Hides any content that overflows the container */
+            background-color: #f0f0f0; /* Light background for the PDF area */
+            padding: 20px 0; /* Padding above and below the PDF */
+        }
+
+        .pdf-embed {
+            width: 80%; /* Adjust as needed, 100% can be too wide on some screens */
+            max-width: 900px; /* Maximum width for the PDF for readability */
+            height: 80vh; /* Adjust height relative to viewport height */
+            border: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for the embed */
+        }
+
+        /* --- FLOATING DOWNLOAD BUTTON STYLES --- */
+        .download-button-wrapper {
+            position: absolute;
+            top: 20px; /* Adjust this value to move it up/down, relative to .pdf-container */
+            left: 50%;
+            transform: translateX(-50%); /* Centers the button horizontally */
+            z-index: 10; /* Ensures the button is above the PDF */
+            white-space: nowrap; /* Prevents button text from wrapping */
+        }
+
+        .download-button {
+            display: inline-block;
+            background-color: #007bff; /* Blue button */
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Button shadow */
+        }
+
+        .download-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            transform: translateY(-2px); /* Slight lift effect on hover */
+        }
+
+        /* --- FOOTER STYLES (MATCH YOUR MAIN SITE'S FOOTER) --- */
+        footer {
+            background-color: #333; /* Example color, match your site */
+            color: white; /* Example color, match your site */
+            padding: 1rem 0;
+            text-align: center;
+            margin-top: auto; /* Pushes the footer to the bottom */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Daren Prince: The Sound of the Underground</h1>
+        </header>
+
+    <div class="pdf-container">
+        <div class="download-button-wrapper">
+            <a href="path/to/your-press-kit.pdf" download class="download-button">Download Press Kit</a>
+        </div>
+        
+        <iframe src="path/to/your-press-kit.pdf#toolbar=0&navpanes=0&scrollbar=0" class="pdf-embed" type="application/pdf">
+            <p>Your browser does not support PDFs. You can <a href="path/to/your-press-kit.pdf">download the PDF</a> instead.</p>
+        </iframe>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Your Website</p>
+        </footer>
+</body>
+</html>
