@@ -241,11 +241,30 @@
       flex: 1;
     }
 
+    /* Ensure links within file-entry don't have default underlines */
+    .file-entry a {
+        text-decoration: none;
+        color: inherit; /* Inherit color from parent elements */
+    }
+
+    /* Style the actual file name text if it's a link */
+    .file-name a {
+        color: #B8BAB7; /* Match original h3 color */
+    }
+
+    /* Make the entire file-name div clickable */
     .file-name {
       font-family: 'Urbanist', sans-serif;
       font-weight: 800;
       margin-bottom: 10px;
+      /* If you want the whole div to visually respond as a link */
+      cursor: pointer;
     }
+    .file-name:hover {
+        /* Optional: add a slight hover effect to the file name text */
+        color: #C2E9C1; /* Example hover color */
+    }
+
 
     .buttons {
       display: flex;
@@ -261,17 +280,20 @@
       font-family: 'Urbanist', sans-serif;
       font-weight: 700;
       white-space: nowrap;
+      transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for hover */
     }
 
     .view-btn {
       background-color: #C2E9C1;
       color: #070A06;
     }
-
-    .download-btn {
-      background-color: #456F3A;
-      color: #FDFDFD;
+    .view-btn:hover { /* Hover effect for view button */
+        background-color: #A0D39F;
     }
+
+
+    /* Removed .download-btn as it's no longer present */
+
 
     footer {
       flex-shrink: 0;
@@ -456,16 +478,19 @@
 
   <main>
     <div class="file-entry">
-      <img src="presskit-thumb-portrait.png" alt="Cover image of Game On! Press Kit & Brand Guide" />
+      <a href="press-kit.html">
+        <img src="presskit-thumb-portrait.png" alt="Cover image of Game On! Press Kit & Brand Guide" />
+      </a>
       <div class="file-meta">
-        <div class="file-name">Game On! – Official Press Kit & Brand Guidelines (US/EU Version)</div>
+        <a href="press-kit.html">
+            <div class="file-name">Game On! – Official Press Kit & Brand Guidelines (US/EU Version)</div>
+        </a>
         <p style="font-size: 14px; margin-bottom: 14px; color: #D5D5D5;">
           Includes high-resolution cover art, author bio, ISBNs, audiobook runtime, brand color palette, and everything media pros need.
         </p>
         <div class="buttons">
-          <a class="btn view-btn" href="Game_On_Press-Retailer_Kit_Brand_Identity_US_EU_compressed.pdf" target="_blank" aria-label="View Game On! Press Kit in browser">View</a>
-          <a class="btn download-btn" href="Game_On_Press-Retailer_Kit_Brand_Identity_US_EU_compressed.pdf" download aria-label="Download Game On! Press Kit PDF">Download (PDF)</a>
-        </div>
+          <a class="btn view-btn" href="press-kit.html" aria-label="View Game On! Press Kit page">View</a>
+          </div>
       </div>
     </div>
   </main>
