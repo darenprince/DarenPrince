@@ -21,6 +21,38 @@
     <meta name="twitter:description" content="Download the essential press kit for Game On! by Daren Prince, featuring high-resolution cover art, author bio, ISBNs, audiobook runtime, brand color palette, and more.">
     <meta name="twitter:image" content="https://files.darenprince.com/og-image.jpg"> <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@500;800&display=swap" rel="stylesheet" />
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DigitalDocument",
+      "name": "Game On! – Official Press Kit & Brand Guidelines (US/EU Version)",
+      "description": "Includes high-resolution cover art, author bio, ISBNs, audiobook runtime, brand color palette, and everything media pros need.",
+      "url": "https://files.darenprince.com/Game_On_Press-Retailer_Kit_Brand_Identity_US_EU_compressed.pdf", /* IMPORTANT: Direct URL TO THE PDF FILE */
+      "encodingFormat": "application/pdf",
+      "image": "https://files.darenprince.com/presskit-thumb-portrait.png", /* URL to your press kit thumbnail/cover image */
+      "author": {
+        "@type": "Person",
+        "@id": "https://files.darenprince.com/#darenprince", /* Reuses the ID from index.html */
+        "name": "Daren Prince",
+        "url": "https://www.darenprince.com/" /* Points to your main website for bio */
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://files.darenprince.com/#darenprincepublishing", /* Reuses the ID from index.html */
+        "name": "Daren Prince Publishing",
+        "url": "https://www.darenprince.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://files.darenprince.com/logo-hires-black-for-light-bg.svg" /* Using the black SVG logo for schema */
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://files.darenprince.com/press-kit.html" /* The URL of this specific HTML page */
+      },
+      "datePublished": "2024-01-15" /* OPTIONAL: The original publication date of the press kit (YYYY-MM-DD) */
+    }
+    </script>
     <style>
         /* General body styling inherited from index.html's inline styles */
         html, body {
@@ -100,7 +132,7 @@
         .menu { margin: 0; padding: 0; list-style: none; overflow: hidden; background-color: #212121; display: flex; align-items: center; height: auto; position: relative; top: auto; left: auto; width: auto; transform: translateX(0); }
         .menu li a { display: block; padding: 15px 20px; text-decoration: none; color: #D5D5D5; font-family: 'Urbanist', sans-serif; font-weight: 500; transition: background-color 0.3s ease, color 0.3s ease; }
         .menu li a:hover { background-color: #070A06; color: #C2E9C1; }
-        /* Active Page Styling - Copied from index.html */
+        /* Active Page Styling - Copied from index.1html */
         .menu li a.active-page { color: #C2E9C1; font-weight: 800; }
         /* === END NEW NAVIGATION STYLES === */
 
@@ -265,8 +297,7 @@
 
   <nav class="header-nav">
     <a href="https://www.darenprince.com" class="logo">
-      <img src="logo-white.png" alt="Daren Prince Official Logo" />
-    </a>
+      <img src="logo-white.png" alt="Daren Prince Official Logo" /> </a>
     <input class="menu-btn" type="checkbox" id="menu-btn" />
     <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
     <ul class="menu">
@@ -280,7 +311,7 @@
   <div class="page-intro-header">
     <h1>Game On! – Official Press Kit & Brand Guidelines (US/EU Version)</h1>
     <p>
-      Includes high-resolution cover art, metadata, author bios, ISBNs, promotional copy, press releases, brand color palette, and everything media pros need!
+      Includes high-resolution cover art, author bio, ISBNs, audiobook runtime, brand color palette, and everything media pros need.
     </p>
   </div>
 
@@ -294,7 +325,7 @@
         class="pdf-embed" 
         style="width:100%; height:80vh;" 
         frameborder="0">
-        <p>Your browser does not support PDFs. You can download using the button above<a href="https://files.darenprince.com/Game_On_Press-Retailer_Kit_Brand_Identity_US_EU_compressed.pdf">download the PDF</a> instead.</p>
+        <p>Your browser does not support PDFs. You can <a href="https://files.darenprince.com/Game_On_Press-Retailer_Kit_Brand_Identity_US_EU_compressed.pdf">download the PDF</a> instead.</p>
     </iframe>
   </div>
 
