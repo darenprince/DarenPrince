@@ -291,8 +291,14 @@
         background-color: #A0D39F;
     }
 
-
-    /* Removed .download-btn as it's no longer present */
+    /* Download button styles */
+    .download-btn {
+      background-color: #456F3A; /* Original darker green */
+      color: #FDFDFD; /* Original white text */
+    }
+    .download-btn:hover {
+        background-color: #3A5F30; /* Darker shade on hover */
+    }
 
 
     footer {
@@ -490,7 +496,8 @@
         </p>
         <div class="buttons">
           <a class="btn view-btn" href="press-kit.html" aria-label="View Game On! Press Kit page">View</a>
-          </div>
+          <a class="btn download-btn" href="Game_On_Press-Retailer_Kit_Brand_Identity_US_EU_compressed.pdf" download aria-label="Download Game On! Press Kit PDF">Download (PDF)</a>
+        </div>
       </div>
     </div>
   </main>
