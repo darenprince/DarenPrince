@@ -151,7 +151,7 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for the embed */
         }
 
-        /* --- FLOATING DOWNLOAD BUTTON STYLES --- */
+        /* --- FLOATING DOWNLOAD BUTTON STYLES (UPDATED COLORS) --- */
         .download-button-wrapper {
             position: absolute;
             top: 60px; /* Adjusted to be below the main nav, above the PDF */
@@ -163,8 +163,8 @@
 
         .download-button {
             display: inline-block;
-            background-color: #C2E9C1; /* Match view-btn from index.html */
-            color: #070A06; /* Match view-btn from index.html */
+            background-color: #456F3A; /* Matches the .download-btn from index.html */
+            color: #FDFDFD; /* Matches the .download-btn from index.html */
             padding: 12px 25px;
             text-decoration: none;
             border-radius: 5px;
@@ -174,7 +174,7 @@
         }
 
         .download-button:hover {
-            background-color: #A0D39F; /* Darker green on hover, matching view-btn hover */
+            background-color: #3A5F30; /* Darker shade on hover, consistent with index.html .download-btn:hover */
             transform: translateY(-2px); /* Slight lift effect on hover */
         }
 
@@ -280,17 +280,21 @@
   <div class="page-intro-header">
     <h1>Game On! – Official Press Kit & Brand Guidelines (US/EU Version)</h1>
     <p>
-      Includes high-resolution cover art, author bio, ISBNs, audiobook runtime, brand color palette, and everything media pros need.
+      Includes high-resolution cover art, metadata, author bios, ISBNs, promotional copy, press releases, brand color palette, and everything media pros need!
     </p>
   </div>
 
   <div class="pdf-container">
     <div class="download-button-wrapper">
-        <a href="Game_On_Press-Retailer_Kit_Brand_Identity_US_EU_compressed.pdf" download class="download-button">Download PDF</a>
+        <a href="https://files.darenprince.com/Game_On_Press-Retailer_Kit_Brand_Identity_US_EU_compressed.pdf" download class="download-button">Download PDF</a>
     </div>
     
-    <iframe src="Game_On_Press-Retailer_Kit_Brand_Identity_US_EU_compressed.pdf#toolbar=0&navpanes=0&scrollbar=0" class="pdf-embed" type="application/pdf">
-        <p>Your browser does not support PDFs. You can <a href="Game_On_Press-Retailer_Kit_Brand_Identity_US_EU_compressed.pdf">download the PDF</a> instead.</p>
+    <iframe 
+        src="https://docs.google.com/gview?url=https://files.darenprince.com/Game_On_Press-Retailer_Kit_Brand_Identity_US_EU_compressed.pdf&embedded=true" 
+        class="pdf-embed" 
+        style="width:100%; height:80vh;" 
+        frameborder="0">
+        <p>Your browser does not support PDFs. You can download using the button above<a href="https://files.darenprince.com/Game_On_Press-Retailer_Kit_Brand_Identity_US_EU_compressed.pdf">download the PDF</a> instead.</p>
     </iframe>
   </div>
 
