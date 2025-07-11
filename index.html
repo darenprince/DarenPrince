@@ -79,8 +79,7 @@
     #loader img {
       width: 300px;
       max-width: 80%;
-      margin-top: 50px; /* NEW: Pushed down from the top slightly */
-      margin-bottom: 20px; /* Adjusted padding between logo and ring */
+      margin-bottom: 0;
       animation: pulse 1.5s infinite ease-in-out;
     }
 
@@ -92,13 +91,13 @@
     /* Styles for the Glowing Loader Ring */
     .ring {
       position: relative;
-      width: 100px;
-      height: 100px;
+      width: 112px;
+      height: 112px;
       border: 0px solid #000;
       border-radius: 50%;
       text-align: center;
-      line-height: 100px;
-      font-size: 10px;
+      line-height: 112px;
+      font-size: 11px;
       color: #87BD72;
       text-shadow: 0 0 10px #87BD72;
       box-shadow: 0 0 20px rgba(135, 189, 114, 0.5);
@@ -107,21 +106,20 @@
       align-items: center;
       justify-content: center;
       white-space: nowrap;
-      /* Adjusted for thickness and moved above logo */
-      order: -1; /* NEW: Ensures ring appears above the image in flex column */
-      margin-bottom: 20px; /* NEW: Space between ring and logo */
+      order: -1;
+      margin-bottom: 50px;
     }
 
     .ring:before {
       content: '';
       position: absolute;
-      top: -3px; /* Adjusted from -1.5px for thicker look */
-      left: -3px; /* Adjusted from -1.5px for thicker look */
+      top: -6px;
+      left: -6px;
       width: 100%;
       height: 100%;
-      border: 6px solid transparent; /* UPDATED: Thicker border */
-      border-top: 6px solid #87BD72; /* UPDATED: Thicker border */
-      border-right: 6px solid #87BD72; /* UPDATED: Thicker border */
+      border: 6px solid transparent;
+      border-top: 6px solid #87BD72;
+      border-right: 6px solid #87BD72;
       border-radius: 50%;
       animation: animateC 2s linear infinite;
     }
@@ -177,29 +175,27 @@
       top: 0;
       width: 100%;
       z-index: 3;
-      padding: 18px 22px;
+      padding: 18px 22px; /* REVERTED: Back to original padding */
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start; /* UPDATED: Align items to the top */
       box-sizing: border-box;
       min-height: 70px;
     }
 
     .header-nav .logo img {
-      max-width: 120px; /* UPDATED: Slightly larger logo */
+      max-width: 110px; /* REVERTED: Back to original size */
       height: auto;
       display: block;
       padding: 0;
-      padding-top: 10; /* This was causing cutoff. We'll adjust it. */
-      /* Remove padding-top and rely on align-items/flex properties or margin for spacing */
-      margin-top: 0; /* Ensuring no unexpected top margin */
+      margin-top: 0;
     }
 
     .header-nav .tagline {
       font-family: 'Urbanist', sans-serif;
       font-weight: 800;
       text-transform: uppercase;
-      color: rgba(135, 189, 114, 0.9); /* UPDATED: Green color with 90% opacity */
+      color: rgba(135, 189, 114, 0.9); /* Green color with 90% opacity */
       font-size: 16px;
       margin-left: 25px;
       white-space: nowrap;
@@ -207,8 +203,8 @@
 
     .logo-and-tagline {
       display: flex;
-      align-items: center;
-      padding-top: 0; /* Ensuring no unexpected padding here */
+      align-items: flex-start; /* UPDATED: Also align items to the top here */
+      padding-top: 0;
     }
 
     /* Menu Button Styles (Hamburger) */
@@ -218,7 +214,7 @@
 
     .menu-icon {
       cursor: pointer;
-      display: none;
+      display: block; /* Ensure it's always block for correct rendering on mobile */
     }
 
     .menu-icon .navicon {
@@ -242,11 +238,11 @@
     }
 
     .menu-icon .navicon:before {
-      top: 6px;
+      top: -6px; /* UPDATED: Corrected position for top bar */
     }
 
     .menu-icon .navicon:after {
-      top: 8px;
+      top: 6px; /* UPDATED: Corrected position for bottom bar */
     }
 
     /* Hamburger Animation */
@@ -315,24 +311,21 @@
       justify-content: center;
       align-items: center;
       min-height: 220px;
+      margin-bottom: 0;
     }
 
     header img {
-      display: none;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Urbanist', sans-serif;
-      font-weight: 800;
-      color: #B8BAB7;
+      display: block;
+      width: 45%;
+      max-width: 400px;
+      height: auto;
+      padding: 12px;
+      box-sizing: border-box;
+      margin: 0 auto 15px auto;
     }
 
     h1 {
-      text-align: center;
-      font-size: 19px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 15px;
+      display: none;
     }
 
     .intro-text {
@@ -587,7 +580,7 @@
 
       /* Mobile Nav specific styles */
       .menu-icon {
-        display: block;
+        display: block; /* Ensure it's displayed */
       }
       .header-nav .logo-and-tagline {
         justify-content: flex-start;
@@ -685,7 +678,8 @@
 
   <div class="mobile-menu-overlay"></div>
 
-  <header> <h1>Download Center</h1>
+  <header>
+    <img src="download-center-heading.png" alt="Download Center" />
     <p class="intro-text">
       Welcome to the official Download Center for Daren Prince. This is your one stop hub for press kits, brand assets, media releases, and exclusive bonus content available to VIP subscribers and media professionals.
     </p>
