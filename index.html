@@ -66,6 +66,8 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      /* No overflow-y: scroll here, let's see if the margin is enough */
+      /* Also no -webkit-overflow-scrolling: touch here for now */
     }
 
     /* Loader */
@@ -141,10 +143,6 @@
     .menu-icon {
       cursor: pointer;
       display: none;
-      padding: 7px;
-      position: relative;
-      user-select: none;
-      z-index: 5;
     }
 
     .menu-icon .navicon {
@@ -235,12 +233,13 @@
     header {
       text-align: center;
       padding: 20px;
-      flex: 1; /* Allows header to take available space for centering */
+      flex: 1; /* Retaining original flex property for header */
       display: flex;
       flex-direction: column;
       justify-content: center; /* Centers content vertically */
       align-items: center; /* Centers content horizontally */
       min-height: 220px; /* Space above the page heading */
+      /* Removed margin-bottom: 100px from here */
     }
 
     header img {
@@ -364,6 +363,7 @@
       padding: 0;
       font-family: 'Helvetica Neue', sans-serif;
       overflow: hidden;
+      margin-bottom: 100px; /* ADDED: 100 pixels of margin below the footer */
     }
 
     /* Styles for the main footer content area */
@@ -381,7 +381,7 @@
     }
     /* Media Queries for Responsiveness */
     @media (max-width: 1280px) { /* Applies to screens smaller than 1350px */
-        body { /* Targeting the body directly as previously suggested */
+        body {
             background-image: url('bg-mobile.jpg'); /* Mobile specific background */
             background-size: cover;
             background-position: center top;
@@ -755,7 +755,7 @@
                 menu.style.transform = 'translateX(0)'; // Show menu
                 mobileMenuOverlay.style.display = 'block'; // Show overlay
             } else {
-                body.classList.remove('menu-open');
+                body.classList.remove('menu');
                 menu.style.transform = 'translateX(-100%)'; // Hide menu
                 mobileMenuOverlay.style.display = 'none'; // Hide overlay
             }
@@ -783,3 +783,4 @@
 
 </body>
 </html>
+m
