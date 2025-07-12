@@ -219,58 +219,60 @@
     }
 
     /* Menu Button Styles (Hamburger) */
-    .menu-btn {
-      display: none;
-    }
+ .menu-btn {
+  display: none; /* Hide the checkbox */
+}
 
-    .menu-icon {
-      cursor: pointer;
-      display: none;
-    }
+.menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  width: 35px;
+  height: 25px;
+}
 
-    .menu-icon .navicon {
-      background: #FDFDFD;
-      display: block;
-      height: 4px;
-      position: relative;
-      transition: background .4s ease-out;
-      width: 20px;
-    }
+.menu-icon .navicon {
+  background: #333;
+  display: block;
+  width: 100%;
+  height: 3px;
+  position: relative;
+  transition: all 0.2s ease-out;
+}
 
-    .menu-icon .navicon:before,
-    .menu-icon .navicon:after {
-      background: #FDFDFD;
-      content: '';
-      display: block;
-      height: 100%;
-      position: absolute;
-      transition: all .4s ease-out;
-      width: 100%;
-    }
+.menu-icon .navicon::before,
+.menu-icon .navicon::after {
+  content: '';
+  background: #333;
+  display: block;
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  transition: all 0.2s ease-out;
+}
 
-    .menu-icon .navicon:before {
-      top: 6px;
-    }
+.menu-icon .navicon::before {
+  top: -8px;
+}
 
-    .menu-icon .navicon:after {
-      top: 8px;
-    }
+.menu-icon .navicon::after {
+  bottom: -8px;
+}
 
-    /* Hamburger Animation */
-    .menu-btn:checked ~ .menu-icon .navicon {
-      background: transparent;
-    }
+/* When checkbox is checked, transform hamburger into X */
+.menu-btn:checked + .menu-icon .navicon {
+  background: transparent;
+}
 
-    .menu-btn:checked ~ .menu-icon .navicon:before {
-      transform: rotate(-45deg);
-      top: 0;
-    }
+.menu-btn:checked + .menu-icon .navicon::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
 
-    .menu-btn:checked ~ .menu-icon .navicon:after {
-      transform: rotate(45deg);
-      top: 0;
-    }
-
+.menu-btn:checked + .menu-icon .navicon::after {
+  transform: rotate(45deg);
+  bottom: 0;
+}
     /* Main Navigation List (Desktop) */
     .menu {
       margin: 0;
@@ -680,8 +682,12 @@
       </a>
       <span class="tagline">IT'S TIME TO LEVEL UP!</span>
     </div>
-    <input class="menu-btn" type="checkbox" id="menu-btn" />
-    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <!-- Hamburger toggle checkbox -->
+<input type="checkbox" id="menu-btn" class="menu-btn" />
+<!-- Label linked to checkbox creates the hamburger icon -->
+<label for="menu-btn" class="menu-icon">
+  <span class="navicon"></span>
+</label>
     <ul class="menu">
       <li><a href="https://darenprince.com/#page-0">Bio</a></li>
       <li><a href="https://darenprince.com/#page-1">Books</a></li>
