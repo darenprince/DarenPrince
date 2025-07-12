@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <!-- Force HTTPS in browsers (as a client-side fallback) -->
+<script>
+  if (location.protocol !== 'https:') {
+    location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+  }
+</script>
+
+<!-- Content Security Policy (CSP) and basic meta security headers -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; script-src 'self' https://*.googleapis.com https://*.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta name="referrer" content="no-referrer-when-downgrade">
+  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Download Center | Daren Prince</title>
