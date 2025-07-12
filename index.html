@@ -225,10 +225,16 @@
 
 .menu-icon {
   cursor: pointer;
-  display: inline-block;
+  display: none
   position: relative;
   width: 35px;
   height: 25px;
+}
+    }
+@media (max-width: 600px) {
+  .menu-icon {
+    display: block;
+  }
 }
 
 .menu-icon .navicon {
@@ -278,9 +284,9 @@
       margin: 0;
       padding: 0;
       list-style: none;
-      overflow: hidden;
       background-color: transparent;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       height: auto;
       position: relative;
