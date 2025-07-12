@@ -6,22 +6,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   menuBtn.addEventListener('change', function () {
     if (this.checked) {
-      body.classList.add('menu-open');
-      menu.style.transform = 'translateX(0)';
-      mobileMenuOverlay.style.display = 'block';
-    } else {
-      body.classList.remove('menu-open');
-      menu.style.transform = 'translateX(-100%)';
-      mobileMenuOverlay.style.display = 'none';
-    }
+  body.classList.add('menu-open');
+  menu.style.transform = 'translateX(0)';
+} else {
+  body.classList.remove('menu-open');
+  menu.style.transform = 'translateX(-100%)';
+}
   });
 
   mobileMenuOverlay.addEventListener('click', () => {
-    menuBtn.checked = false;
-    body.classList.remove('menu-open');
-    menu.style.transform = 'translateX(-100%)';
-    mobileMenuOverlay.style.display = 'none';
-  });
+  menuBtn.checked = false;
+  body.classList.remove('menu-open');
+  menu.style.transform = 'translateX(-100%)';
+});
 
   window.addEventListener('resize', () => {
     if (window.innerWidth > 600) {
