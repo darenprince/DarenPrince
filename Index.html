@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <script src="JS/force-https.js"></script>
+  <!-- Content Security Policy (CSP) and basic meta security headers -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; script-src 'self' https://*.googleapis.com https://*.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; frame-ancestors 'none';">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta name="referrer" content="no-referrer-when-downgrade">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Media Download Center | Author Daren Prince</title>
+  <title>Download Center | Daren Prince</title>
   <link rel="icon" type="image/png" href="favicon.png" />
   <meta property="og:title" content="Daren Prince | Download Center for Press Kits, Brand Assets & VIP Content" />
   <meta property="og:description" content="Access essential press kits, images, promotional content, author bios, and exclusive content from author Daren Prince." />
@@ -16,6 +17,7 @@
   <meta property="og:url" content="https://files.darenprince.com/" />
   <meta name="twitter:card" content="summary_large_image" />
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;800&display=swap" rel="stylesheet" />
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -60,6 +62,7 @@
       flex-direction: column;
       min-height: 100vh;
     }
+    /* Loader */
     #loader {
       position: fixed;
       top: 0;
@@ -145,7 +148,8 @@
       0% { transform: rotate(45deg); }
       100% { transform: rotate(405deg); }
     }
-    /* === NAVIGATION FIXES BASED ON USER FEEDBACK === */
+
+    /* === NAVIGATION STYLES === */
     .header-nav {
       background-color: #212121;
       box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
@@ -155,14 +159,10 @@
       z-index: 3;
       padding: 18px 22px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      min-height: 70px;
-    }
-    .logo-and-tagline {
-      display: flex;
       align-items: center;
-      height: 100%;
+      box-sizing: border-box;
+      min-height: 70px;
     }
     .header-nav .logo img {
       max-width: 110px;
@@ -178,28 +178,29 @@
       color: #587F53;
       font-size: 16px;
       margin-left: 25px;
+      white-space: nowrap;
+    }
+    .logo-and-tagline {
       display: flex;
       align-items: center;
-      height: 100%;
     }
     .menu-btn {
       display: none;
     }
     .menu-icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
       cursor: pointer;
+      display: none;
       position: relative;
       width: 35px;
       height: 25px;
-      margin-left: 16px;
     }
-    .menu-icon .navicon,
-    .menu-icon .navicon::before,
-    .menu-icon .navicon::after {
-      background: #e1e1e1 !important;
+    @media (max-width: 600px) {
+      .menu-icon {
+        display: block;
+      }
+    }
+    .menu-icon .navicon {
+      background: #333;
       display: block;
       width: 100%;
       height: 3px;
@@ -209,12 +210,18 @@
     .menu-icon .navicon::before,
     .menu-icon .navicon::after {
       content: '';
+      background: #333;
+      display: block;
+      width: 100%;
+      height: 3px;
       position: absolute;
       transition: all 0.2s ease-out;
     }
     .menu-icon .navicon::before { top: -8px; }
     .menu-icon .navicon::after { bottom: -8px; }
-    .menu-btn:checked + .menu-icon .navicon { background: transparent !important; }
+    .menu-btn:checked + .menu-icon .navicon {
+      background: transparent;
+    }
     .menu-btn:checked + .menu-icon .navicon::before {
       transform: rotate(-45deg);
       top: 0;
@@ -224,22 +231,21 @@
       bottom: 0;
     }
     .menu {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      gap: 32px;
       margin: 0;
       padding: 0;
       list-style: none;
       background-color: transparent;
+      display: flex;
+      align-items: center;
       height: auto;
       position: relative;
       top: auto;
       left: auto;
+      width: 100%;
       transform: translateX(0);
     }
     .menu li {
-      flex: 0 0 auto;
+      flex: 1 1 0;
       min-width: 0;
     }
     .menu li a {
@@ -278,42 +284,6 @@
       opacity: 1;
       visibility: visible;
     }
-    @media (max-width: 600px) {
-      .menu {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        background-color: #2f2f2f;
-        padding-top: 80px;
-        transition: transform 0.4s ease-out;
-        transform: translateX(-100%);
-        box-sizing: border-box;
-        z-index: 4;
-      }
-      .menu li {
-        flex: none;
-        width: 100%;
-      }
-      .menu li a {
-        text-align: left;
-        width: 100%;
-        padding-left: 32px;
-        padding-right: 32px;
-      }
-      .logo-and-tagline {
-        align-items: center;
-      }
-      .menu-icon {
-        align-items: center;
-        margin-left: 0;
-      }
-    }
-    /* --- End of navigation styles --- */
     header {
       text-align: center;
       padding: 20px;
@@ -429,6 +399,14 @@
       margin-top: 0px;
       margin-bottom: 40px;
     }
+    @media (max-width: 1280px) {
+      body {
+        background-image: url('bg-mobile.jpg');
+        background-size: cover;
+        background-position: center top;
+        background-attachment: fixed;
+      }
+    }
     .content-wrapper {
       max-width: 1280px;
       margin-left: auto;
@@ -499,13 +477,16 @@
       transform: scale(1.1);
       opacity: 1;
     }
-    @media (max-width: 1280px) {
-      body {
-        background-image: url('bg-mobile.jpg');
-        background-size: cover;
-        background-position: center top;
-        background-attachment: fixed;
-      }
+    .mobile-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 2;
+      display: none;
+      transition: background-color 0.4s ease;
     }
     @media (max-width: 600px) {
       .file-entry {
@@ -579,9 +560,13 @@
   </style>
 </head>
 <body>
+
   <div id="loader">
     <img src="tagline.png" alt="Burn the Mask. Speak the Truth." />
-    <div class="ring">Loading<span></span></div>
+    <div class="ring">
+      Loading
+      <span></span>
+    </div>
   </div>
 
   <nav class="header-nav">
@@ -620,10 +605,10 @@
       </a>
       <div class="file-meta">
         <a href="press-kit.html">
-          <div class="file-name">Game On! – Official Press Kit & Brand Guidelines (US/EU Version)</div>
+            <div class="file-name">Game On! – Official Press Kit & Brand Guidelines (US/EU Version)</div>
         </a>
         <p style="font-size: 14px; margin-bottom: 14px; color: #D5D5D5;">
-          Includes high resolution images, author bio, metadata, press releases, author bios, brand identity, and everything media pros need.
+          Includes high resolution images, author bio, metadata,press releases, author bios, brand identity, and everything media pros need.
         </p>
         <div class="buttons">
           <a class="btn view-btn" href="press-kit.html" aria-label="View Game On! Press Kit page">View</a>
@@ -631,7 +616,6 @@
         </div>
       </div>
     </div>
-    <!-- Add more .file-entry sections below for additional downloads as needed -->
   </main>
 
   <footer style="color: #D5D5D5; font-family: 'Helvetica Neue', sans-serif;">
@@ -666,8 +650,10 @@
               Get exclusive updates, content & early access direct from author Daren Prince.
             </p>
             <form id="subscribe-form" novalidate>
-              <input type="email" name="email" placeholder="Email address" aria-label="Your email address" style="..." required />
-              <button type="submit" style="...">Join →</button>
+              <form action="/thank-you.html" method="POST">
+                <input type="email" name="email" placeholder="Email address" aria-label="Your email address" style="..." required />
+                <button type="submit" style="...">Join →</button>
+              </form>
             </form>
           </div>
           <div style="flex: 1 1 280px;">
@@ -718,3 +704,15 @@
             <a href="#" style="color:#87BD72; text-decoration:none; margin: 0 8px;">Compliance</a>
             |
             <a href="mailto:contact@darenprince.com" style="color:#87BD72; text-decoration:none; margin: 0 8px;">Contact</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External scripts only, no inline JS -->
+  <script src="JS/loader.js" defer></script>
+  <script src="JS/mobile-nav.js" defer></script>
+  <script src="JS/newsletter.js" defer></script>
+</body>
+</html>
